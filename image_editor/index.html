@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div id="controls">
+                <button type="button" id="crop" class="btn btn-primary">CROP</button>
+                <button type="button" id="lrotate" class="btn btn-primary">Rotate Left</button>
+                <button type="button" id="rrotate" class="btn btn-primary">Rotate Right</button>
+                <button type="button" id="zoomin" class="btn btn-primary">ZOOM In</button>
+                <button type="button" id="zoomout" class="btn btn-primary">ZOOM Out</button>
+                <button type="button" id="reset" class="btn btn-primary">Reset</button>
+            </div>
+            <div id="img_area">
+                <img id="image" src="">
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--             <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save crop</button>
+ -->            </div>
+        </div>
+        </div>
+    </div>
+    <h1 style="text-align:center;">Click on any image to edit</h1>
+    <div id="img_div">  
+        <div class="icon" id="icon1"><img src="images/img1.webp"></div>
+        <div class="icon" id="icon2"><img src="images/img2.webp"></div>
+        <div class="icon" id="icon3"><img src="images/img3.webp"></div>
+        <div class="icon" id="icon4"><img src="images/img4.webp"></div>
+    </div>
+    <!-- <div id="croped">
+
+    </div> -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.1.0/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cropper/1.0.1/jquery-cropper.min.js"></script>    
+    <script src="js/myJquery.js"></script>
+</body>
+</html>

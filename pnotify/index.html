@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="PNotifyBrightTheme.css">
+</head>
+    <input type="text" name="fname" id="fname">
+    <button id="check">Click</button>
+<body>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="Pnotify.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("#check").click(function(){
+                
+                var name = $("#fname").val();
+                $('.pnotify').css('display','none');
+                if(name.length<1){
+                    setNotify( 'First Name Error','Firstname is required');
+                }
+            });
+        });
+        function setNotify(title1,text1)
+		{
+		    new PNotify.error(
+			{
+			    title: title1,
+				text: text1,
+				stack: window.maxOpenWait
+			});
+		}
+    </script>
+</body>
+</html>

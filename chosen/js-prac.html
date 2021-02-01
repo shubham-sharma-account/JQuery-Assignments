@@ -1,0 +1,184 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+   <script src="docsupport/jquery-3.2.1.min.js"></script>
+   <script src="js/chosen.jquery.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> 
+   <link rel="stylesheet" href="docsupport/style.css">
+   <link rel="stylesheet" href="css/chosen.css">
+ </head>
+ <body>
+   
+  <select data-placeholder="Choose your city" class="chosen-select" id="tags1" name="tags" >
+    <option>Saharanpur</option>
+    <option>Yamunanagar</option>
+    <option>Delhi</option>
+    <option>Mumbai</option>
+    <option>Raduar</option>
+  </select>
+
+  <select data-placeholder="Choose your city" multiple class="chosen-select" id="tags2" name="tags" >
+    <option>Saharanpur</option>
+    <option>Yamunanagar</option>
+    <option>Delhi</option>
+    <option>Mumbai</option>
+    <option>Raduar</option>
+  </select>
+  <script>
+    $("#tags1").chosen(); 
+    $("#tags2").chosen(); 
+  </script>
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.9/datepicker.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.9/datepicker.min.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({ minDate: -20, maxDate: "+1M +10D" });
+  } );
+  </script>
+</head>
+<body>
+ 
+<p>Date: <input type="text" id="datepicker"></p>
+ 
+ 
+</body>
+</html>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.9/datepicker.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.9/datepicker.min.js"></script>
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .error{
+      color:red;
+    }
+  </style>
+</head>
+<body>
+  <form id="myform">
+    <input type="text" id="name" name="username"><br>
+    <button>Submit</button>
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        var formdata = $("#myform");
+      if(formdata.length){
+        formdata.validate({
+          rules:{
+              username:{
+                required:true
+              }
+          },
+          messages:{
+            username:{
+              required:"Username is required"
+            }
+          }
+        })
+      }
+      })
+    });
+  </script>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Range with fixed maximum</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> 
+    <script src="js/myJquery.js"></script>
+  <script>
+  $( function() {
+    // An array of dates
+    var eventDates = {};
+    eventDates[ new Date( '10/07/2020' )] = new Date( '10/07/2020' );
+    
+    // datepicker
+    $('#datepicker').datepicker({
+        beforeShowDay: function( date ) {
+            var highlight = eventDates[date];
+            if( highlight ) {
+                 return [true, "event", 'Tooltip text'];
+            } else {
+                 return [true, '', ''];
+            }
+        }
+    });
+});
+  </script>
+  <style>
+    .event a {
+    background-color: #5FBA7D !important;
+    color: #ffffff !important;
+    }
+  </style>
+</head>
+<body>
+ 
+  Date: <input type="text" id="datepicker">
+ 
+ 
+</body>
+</html>
+ -->

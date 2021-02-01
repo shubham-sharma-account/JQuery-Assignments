@@ -1,0 +1,122 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #con{
+            width:50%;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div id="con"></div>
+    <button id="add">click</button>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var i=1;
+            $("#add").click(function(){
+            var form = `<div id="book${i}">
+            <label>Book name</label>
+            <input type="text" name="bookname${i}" id="bookname" placeholder="Book name"><br><br>
+            <label>Book price</label>
+            <input type="text" name="bookprice${i}" id="bookprice${i}" placeholder="Book price"><br><br>
+            <label>Book description</label>
+            <textarea name="bookdesc${i}" class="bookdesc${i}" id="bookdesc" placeholder="Description"></textarea><br><br>
+            <div id="c_box_div">
+                <label>Book level</label>    
+                    <input type="checkbox" name="book_cbox${i}" id="checkbox1" value="Ordinary">
+                    <input type="checkbox" name="book_cbox${i}" id="checkbox" value="High">
+                    <input type="checkbox" name="book_cbox${i}" id="checkbox" value="Low">
+            </div><br><br>
+            <label>Publised date</label>
+            <input type="text" name="bookdate${i}" id="bookdate" placeholder="dd-mm-yyyy"><br><br>
+            <label>ISDN no.</label>
+            <input type="text" name="bookISBN${i}" id="bookISBN" placeholder="Book number"><br><br>
+            <button class="remove-btn" id="remove-btn${i}" onclick="remove()">Remove</button>
+            </div>`;
+            var div = $("#con");
+            div.append(form);
+            });
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        #con{
+            width:50%;
+            background-color: beige;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="con"></div>
+    <button id="add">Click</button>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var i=1;
+            var form = `<div id="book${i}">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Book name</label>
+                    <input type="text" class="form-control" name="bookname${i}" id="bookname" placeholder="Book name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Book Price</label>
+                    <input type="text" class="form-control" name="bookprice${i}" id="bookprice${i}" placeholder="Book price">
+                </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Book Description</label>
+                <textarea class="form-control" name="bookdesc${i}" class="bookdesc${i}" id="bookdesc" placeholder="Description"></textarea>
+            </div>
+            <div id="c_box_div">
+            <label class="form-check-label" for="defaultCheck1">Book level<label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="book_cbox${i}" id="checkbox1" value="Ordinary">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Ordinary
+                    </label>
+
+                    <input class="form-check-input" type="checkbox" name="book_cbox${i}" id="checkbox" value="High">
+                    <label class="form-check-label" for="defaultCheck1">
+                        High
+                    </label>
+
+                    <input class="form-check-input" type="checkbox" name="book_cbox${i}" id="checkbox" value="Low">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Low
+                    </label>
+                </div>
+            </div><br><br>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Published date</label>
+                <input type="email" class="form-control" name="bookdate${i}" id="bookdate" placeholder="dd-mm-yyyy">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">ISBN no.</label>
+                <input type="email" class="form-control" name="bookISBN${i}" id="bookISBN" placeholder="Book number">
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block remove-btn" id="remove-btn${i}" onclick="remove()">Block level button</button>
+            </div>`;
+            var div = $("#con");
+            div.append(form);
+            });
+        });
+    </script>
+</body>
+</html>

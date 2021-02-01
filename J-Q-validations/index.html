@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./CSS/style.css">
+    </head>
+    <body>
+        <header>
+            <p>Library System</p>
+        </header>
+        <form name="myform" id="myform" onsubmit="return false">
+            <div class="fname"><lable>First Name: </lable><input id="fname" type="text" name="firstname" placeholder="First name"><br><br></div>
+            <lable>Last Name: </lable><input id="lname" type="text" name="lastname" placeholder="Last name"><br><br>
+            <div class="email"><lable>Email: </lable><input  id="email" type="email" name="email" placeholder="adc@123.com"><br><br></div>
+            <lable>Phone no.: </lable><input id="phnum" type="text" name="phoneno" placeholder="+91-000-000-000-0"><br><br>
+            <textarea id="address" name="address" placeholder="Address"></textarea><br><br>
+            <lable>Course: </lable><select id="course" name="course">
+                    <option value="">Select Course</option>
+                    <option value="10th">10th</option>
+                    <option value="12th">12th</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="MBA">MBA</option>
+                </select><span id='courseerr' style="display:none;"></span><br>
+            <div id="subjects" class="subjects">
+                <label class="sub_lable">Subjects:</label>
+                <input type="checkbox" name="subject" value="Hindi"><label>Hindi</label>
+                <input type="checkbox" name="subject" value="English"><label>English</label>
+                <input type="checkbox" name="subject" value="SST"><label>SST</label>
+                <input type="checkbox" name="subject" value="Science"><label>Science</label>
+                <input type="checkbox" name="subject" value="Maths"><label>Maths</label>
+            </div><br>
+            Time:<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider-range-max"></div>
+            <lable>Submission Date:</lable><input id="date" type="text" name="date" placeholder="mm/dd/yyyy">
+            <select id="locale">
+                <option value="zh-TW">Chinese Traditional (&#32321;&#39636;&#20013;&#25991;)</option>
+                <option value="">English</option>
+              </select>
+            <button>Submit</button>
+        </form>
+        <div class="submit">
+            <p style="font-size: 20px; background-color: rgb(233, 220, 220);">Submitted Information</p>
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <p id="p5"></p>
+            <p id="p6"></p>
+            <p id="p_sub"></p>
+            <p id="p7"></p>
+            <p id="p8"></p>
+        </div>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> 
+        <script>
+            $( function() {
+                $( "#slider-range-max" ).slider({
+                range: "max",
+                min: 1,
+                max: 5,
+                value: 0,
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( ui.value );
+                }
+                });
+            $( "#amount" ).val( $( "#slider-range-max" ).slider( "value" ) );
+            });
+            $("#date").datepicker({
+                dateFormat: "dd-mm-yy",
+                changeMonth: true,
+                changeYear: true,
+            });
+            $( function() {
+                $( "#date" ).datepicker( $.datepicker.regional[ "en" ] );
+                $( "#locale" ).on( "change", function() {
+                $( "#date" ).datepicker( "option",
+                    $.datepicker.regional[ $( this ).val() ] );
+                });
+            } );
+        </script>
+        <script src="JS/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("../bg1.jpeg");
+    background-size: cover;
+}
+.left_section , .right_section{
+    width:50%;
+    height:100px;
+    float: left;
+
+}
+#myform{
+    background-color: rgb(19, 230, 177);
+    padding:15px;
+    display: none;
+    background-color: ;
+}
+#add_author{
+    position: absolute;
+    top:35vh;
+    left:30vh; 
+    padding:8vh 10vh;
+    font-size: 40px;
+}
+#myform h1{
+    background-color: rgb(38, 177, 38);
+    color:white;padding:0 41.7vh;
+    text-align: center;
+    padding:3vh 0;
+}
+#submit-btn, #add-book{
+    width:100%;
+    margin-top:5px;
+    font-size:20px;
+}
+.form-check-label {
+    margin-bottom: 0;
+    margin-left: 23px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    margin-left: 8px;
+}
+.error{
+    color:red;
+    font-size:15px;
+}
+table {
+    width: 80%;
+    margin: auto;
+}
+th,td{
+    border-top: 1px solid rgb(14, 0, 0);
+    text-align: center;
+    padding:10px 0 10px 0;
+}
+.right_section h2{
+    font-size: 35px;
+    text-align: center;
+    margin-top:30vh;
+    margin-bottom:0;
+}

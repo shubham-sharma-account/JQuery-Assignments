@@ -1,0 +1,113 @@
+/*** **/
+body{
+    margin: 0;
+    display: flow-root;
+    font-family: sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.error{
+    color: red;
+}
+.event a {
+    background-color: red !important;
+}
+#time_per{
+    display: none;
+}
+#sub-error{
+    display: none;
+}
+
+
+/*** Header  */
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    max-width: 98%;
+    margin: auto;
+    border-radius: 5px;  
+}
+header h1{
+    margin: 0;
+    font-weight: 100;
+}
+
+/*** Section main form ***/
+.mainForm{
+    padding: 10px;
+    float: left;
+}
+.mainForm .row {
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+}
+.mainForm .row .col-sm-3{
+    font-weight: bold;
+    width: 25%;
+    align-self: center;
+}
+[type=text],[type=email],[type=number],
+select,[type=date],textarea{
+    width: 100%;
+    float: right;
+    border-radius: 4px;
+    border: 1px solid grey;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+.mainForm .row .col-sm .errInput{
+    color: red;
+    font-size: 12px;
+    padding: 0 10px;
+    display: none;
+}
+.mainForm .row .col-sm label{
+    margin-bottom: 0;
+    font-size: 15px;
+    padding: 5px 0 0;
+}
+.mainForm form  input[type=submit]{
+    background-color: tomato;
+    color: white;
+    border-radius: 4px;
+    border: 1px;
+    padding: 5px;
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+}
+
+/********* aside bar ********/
+.output{
+    margin: 15px ;
+}
+.output .inner{
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.output p{
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    width: 100%;
+}
+.output .heading{
+    background-color: #dedede;
+    padding-left: 15px;
+}
+.output p span{
+    font-weight: 200;
+}
+
+.output #botmbrdr{
+    border-bottom: 0;
+}
+
+.half{
+    width: 49%;
+}

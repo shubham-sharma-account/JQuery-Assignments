@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Validator Plugin </title>
+
+    <!-----     Css    -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+
+    <!------- multiple select ------->
+    <link rel="stylesheet" href="docsupport/style.css">
+    <link rel="stylesheet" href="docsupport/prism.css">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link rel="stylesheet" href="css/style.css"> 
+
+
+
+
+  </head>
+  <body>
+
+    <header>
+        <p>Library System</p>
+    </header>
+    <form name="myform" id="myform" onsubmit="return false">
+        <lable>First Name: </lable><input id="fname" type="text" name="First name" placeholder="First name"><span id='fnameerr' style="display:none;"></span><br>
+        <lable>Last Name: </lable><input id="lname" type="text" name="Last name" placeholder="Last name"><span id='lnameerr' style="display:none;"></span><br>
+        <lable>Email: </lable><input  id="email" type="email" name="Email" placeholder="adc@123.com"><span id='emailerr' style="display:none;"></span><br>
+        <lable>Phone no.: </lable><input id="phnum" type="text" name="Phone no." placeholder="+91-000-000-000-0"><span id='phoneerr' style="display:none;"></span><br>
+        <textarea id="address" name="Address " placeholder="Address"></textarea><span id='addresserr' style="display:none;"></span><br>
+        <lable>Course: </lable><select id="course" name="Course" class="select_box">
+                <option value="">Select Course</option>
+                <option value="10th">10th</option>
+                <option value="12th">12th</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+            </select><span id='courseerr' style="display:none;"></span><br>
+        <div id="subjects">
+            <label class="sub_lable">Subjects:</label>
+            <input type="checkbox" name="Subject" id="hin" value="Hindi"><label id="hinlbl">Hindi</label>
+            <input type="checkbox" name="Subject" id="eng" value="English"><label id="englbl">English</label>
+            <input type="checkbox" name="Subject" id="sst" value="SST"><label id="sstlbl">SST</label>
+            <input type="checkbox" name="Subject" id="sc" value="Science"><label id="sclbl">Science</label>
+            <input type="checkbox" name="Subject" id="maths" value="Maths"><label id="mathslbl">Maths</label>
+        </div><br><span id='subjecterr' style="display:none;"></span><br>
+        <lable>Time Period:</lable><select id="time" class="select_box">
+            <option value="">Select Time</option>
+            <option value="1 day">1 day</option>
+            <option value="2 day">2 day</option>
+            <option value="3 day">3 day</option>
+            <option value="4 day">4 day</option>
+            <option value="5 day">5 day</option>
+            <option value="6 day">6 day</option>
+        </select><span id='timeerr' style="display:none;"></span><br>
+        <lable>Submission Date:</lable><input id="date" type="text" name="Date" placeholder="dd-mm-yyyy">
+        <span id='dateerr' style="display:none;"></span><br>
+        <label>Location:</label><select data-placeholder="Choose a country..." multiple class="chosen-select" id="tags" name="tags" >
+            <option value="Tag1">Tag1</option>
+            <option value="Tag2">Tag2</option>
+            <option value="Tag3">Tag3</option>
+            <option value="Tag4">Tag4</option>
+          </select>
+        <button id="submit_btn" onclick="validate()">Submit</button>
+    </form>
+    <div class="submit">
+        <p style="font-size: 20px; background-color: rgb(233, 220, 220);">Submitted Information</p>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <p id="p_sub"></p>
+        <p id="p7"></p>
+    </div>
+
+    <!-------- Js --------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+   
+
+    <script src="docsupport/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/chosen.jquery.js" type="text/javascript"></script>
+    <script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+    <script src="docsupport/init.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18n/jquery-ui-i18n.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> 
+    <script src="js/myJquery.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+ <!doctype html>
+ <html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Tabs Assignment</title>
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+   <link rel="stylesheet" href="css/spectrum.css">
+ 
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ </head>
+ <body>
+  
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Tab 1</a></li>
+      <li><a href="#tabs-2">Tab 2</a></li>
+      <li><a href="#tabs-3">Tab 3</a></li>
+    </ul>
+    <!--Tab 1-->
+    <div id="tabs-1">
+      <div id="accordion">
+        <h3>Name and Telephone Mask</h3>
+        <div>
+            <form id="form1">
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="uname"><i class="fa fa-user" aria-hidden="true"></i> Username</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username" name="uname">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i> Phone No</span>
+                    </div>
+                    <input type="text" class="form-control" id="phone" placeholder="+91-00000-00000" name="phone">
+                  </div>
+                </div>
+                <h3>DOB and Favorite Color</h3>
+                <div>
+                    <div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-calendar" aria-hidden="true"></i> Date Of Birth</span>
+                            </div>
+                            <input type="text" class="form-control" id="date" placeholder="Date of Birth" name="dob">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-paint-brush" aria-hidden="true"></i> Fav. Colour</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Colour" id="color" name="color">
+                        </div>
+                    </div>
+                </div>
+              </div>   
+              <button type="submit" class="btn btn-success mt-3" id="submit_btn">Submit</button>
+            </div>
+
+              <!--Tab 2-->
+            <div id="tabs-2">
+              <div>
+                <div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2"><i class="fa fa-briefcase" aria-hidden="true"></i> Experience Start</span>
+                    </div>
+                    <input type="text" class="form-control" id="start_date" name="start_date" placeholder="Enter Start Date">
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2"><i class="fa fa-male" aria-hidden="true"></i> Experience End</span>
+                    </div>
+                    <input type="text" class="form-control" id="end_date" name="end_date" placeholder="Enter End Date">
+                  </div>
+                </div>
+              </div>
+            <button type="submit" id="show_data_btn" class="btn btn-success mt-3">Show Details</button>
+          </form>
+          </div>
+
+   <!--Tab 3-->
+    <div id="tabs-3">
+      <div class="row justify-content-around" style="margin:0 40vh 0 40vh;">
+        <div class="col-4" style="width:20%">
+          <p>Name</p>
+          <p>Phone Number</p>
+          <p>Date Of Birth</p>
+          <p>Favorite Color</p>
+          <p>Experience Start</p>
+          <p>Experience</p>
+          <p>Experience End</p>
+        </div>
+        <div class="col-4" style="width:20%">
+          <p id="p1"></p>
+          <p id="p2"></p>
+          <p id="p3"></p>
+          <p id="p4"></p>
+          <p id="p5"></p>
+          <p id="p6"></p>
+          <p id="p7"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+       <!--Scripts-->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+       <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script> 
+    
+       <script src="js/jquery.mask.js"></script>
+       <script src="js/spectrum.js"></script>
+       <script src="js/moment.js"></script>
+       <script src="js/jquery.js"></script>
+ </body>
+ </html>
